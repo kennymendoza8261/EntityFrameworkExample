@@ -10,7 +10,7 @@ using EntityFrameworkExample.Models;
 using EntityFrameworkExample.Services;
 
 namespace EntityFrameworkExample.Controllers
-    {
+{
         public class CubeController : Controller
         {
             private CubeService service = new CubeService();
@@ -106,6 +106,5 @@ namespace EntityFrameworkExample.Controllers
                 return View(cubeEdit);
             }
         }
-    }
-
 }
+

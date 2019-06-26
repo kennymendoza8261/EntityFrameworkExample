@@ -124,6 +124,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BarrelController.cs" />
+    <Compile Include="Controllers\CubeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\Configurations\BarrelConfiguration.cs" />
     <Compile Include="Data\Configurations\CubeConfiguration.cs" />
@@ -137,10 +138,6 @@
     <Compile Include="Migrations\201906261448424_Barrel.Designer.cs">
       <DependentUpon>201906261448424_Barrel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906261857580_Cube.cs" />
-    <Compile Include="Migrations\201906261857580_Cube.Designer.cs">
-      <DependentUpon>201906261857580_Cube.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Barrel.cs" />
     <Compile Include="Models\Cube.cs" />
@@ -153,12 +150,9 @@
     <Compile Include="Repository\BarrelRepository.cs" />
     <Compile Include="Repository\CubeRepository.cs" />
     <Compile Include="Services\BarrelService.cs" />
+    <Compile Include="Services\CubeService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EntityFrameworkExample.Data.Context.DataContext.mdf" />
-    <Content Include="App_Data\EntityFrameworkExample.Data.Context.DataContext_log.ldf">
-      <DependentUpon>EntityFrameworkExample.Data.Context.DataContext.mdf</DependentUpon>
-    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
@@ -284,6 +278,7 @@
     <Content Include="Views\Barrel\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
@@ -302,9 +297,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201906261448424_Barrel.resx">
       <DependentUpon>201906261448424_Barrel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906261857580_Cube.resx">
-      <DependentUpon>201906261857580_Cube.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\EntityFrameworkExample.Migrations.Barrel.resources" />
   </ItemGroup>

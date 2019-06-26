@@ -271,11 +271,13 @@
     <Content Include="Views\Barrel\Create.cshtml" />
     <Content Include="Views\Barrel\Edit.cshtml" />
     <Content Include="Views\Barrel\Delete.cshtml" />
+    <Content Include="Views\Cube\Delete.cshtml" />
+    <Content Include="Views\Cube\Create.cshtml" />
+    <Content Include="Views\Cube\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Views\Barrel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

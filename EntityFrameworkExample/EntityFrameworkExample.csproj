@@ -140,6 +140,7 @@
     <Compile Include="Models\ExampleChildEntity.cs" />
     <Compile Include="Models\ExampleEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\BarrelRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

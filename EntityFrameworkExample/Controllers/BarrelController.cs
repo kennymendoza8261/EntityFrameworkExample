@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using EntityFrameworkExample.Models;
 using EntityFrameworkExample.Services;
 
-namespace DatabaseActivities.Controllers
+namespace EntityFrameworkExample.Controllers
 {
     public class BarrelController : Controller
     {

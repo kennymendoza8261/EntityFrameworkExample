@@ -33,6 +33,7 @@ namespace DatabaseActivities.Controllers
         {
             if (ModelState.IsValid)
             {
+                barrelCreate.DateCreated = DateTime.Now;
                 service.AddBarrel(barrelCreate);
                 return RedirectToAction("Index");
             }

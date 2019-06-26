@@ -126,6 +126,7 @@
     <Compile Include="Controllers\BarrelController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\Configurations\BarrelConfiguration.cs" />
+    <Compile Include="Data\Configurations\CubeConfiguration.cs" />
     <Compile Include="Data\Configurations\ExampleChildEntityConfiguration.cs" />
     <Compile Include="Data\Configurations\ExampleEntityConfiguration.cs" />
     <Compile Include="Data\Context\DataContext.cs" />
@@ -136,8 +137,13 @@
     <Compile Include="Migrations\201906261448424_Barrel.Designer.cs">
       <DependentUpon>201906261448424_Barrel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906261857580_Cube.cs" />
+    <Compile Include="Migrations\201906261857580_Cube.Designer.cs">
+      <DependentUpon>201906261857580_Cube.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Barrel.cs" />
+    <Compile Include="Models\Cube.cs" />
     <Compile Include="Models\ExampleChildEntity.cs" />
     <Compile Include="Models\ExampleEntity.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
@@ -145,9 +151,14 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BarrelRepository.cs" />
+    <Compile Include="Repository\CubeRepository.cs" />
     <Compile Include="Services\BarrelService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\EntityFrameworkExample.Data.Context.DataContext.mdf" />
+    <Content Include="App_Data\EntityFrameworkExample.Data.Context.DataContext_log.ldf">
+      <DependentUpon>EntityFrameworkExample.Data.Context.DataContext.mdf</DependentUpon>
+    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
@@ -270,9 +281,7 @@
     <Content Include="Views\Barrel\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Views\Barrel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -290,6 +299,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201906261448424_Barrel.resx">
       <DependentUpon>201906261448424_Barrel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906261857580_Cube.resx">
+      <DependentUpon>201906261857580_Cube.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\EntityFrameworkExample.Migrations.Barrel.resources" />
   </ItemGroup>

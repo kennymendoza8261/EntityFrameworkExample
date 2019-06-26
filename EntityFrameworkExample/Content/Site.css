@@ -22,3 +22,35 @@ select,
 textarea {
     max-width: 280px;
 }
+table{
+    color: #379FB3;
+    border: 3px solid black;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+}
+th{
+    text-align: center;
+}
+tr{
+    border:2px solid black;
+}
+a{
+    color: #379FB3;
+}
+h2{
+    color: #FFAD69;
+    font-family: 'Trebuchet MS';
+}
+h4 {
+    font-family: 'Trebuchet MS';
+    color: #379FB3;
+}
+dl{
+    font-family: 'Trebuchet MS';
+    color: #379FB3;
+    font-size: 18px;
+}
+.edit-page {
+    font-family: 'Trebuchet MS';
+    color: #379FB3;
+}

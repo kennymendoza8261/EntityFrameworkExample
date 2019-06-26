@@ -11,7 +11,7 @@ using EntityFrameworkExample.Services;
 
 namespace DatabaseActivities.Controllers
 {
-    public class EmployeesController : Controller
+    public class BarrelController : Controller
     {
         private BarrelService service = new BarrelService();
 
@@ -29,15 +29,15 @@ namespace DatabaseActivities.Controllers
          //Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Barrel barrel)
+        public ActionResult Create(Barrel barrelCreate)
         {
             if (ModelState.IsValid)
             {
-                service.AddBarrel(barrel);
+                service.AddBarrel(barrelCreate);
                 return RedirectToAction("Index");
             }
 
-            return View(barrel);
+            return View(barrelCreate);
         }
 
         //Delete
@@ -47,20 +47,20 @@ namespace DatabaseActivities.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Barrel barrel = service.GetBarrelById((int)id);
-            if (barrel == null)
+            Barrel barrelDelete = service.GetBarrelById((int)id);
+            if (barrelDelete == null)
             {
                 return HttpNotFound();
             }
-            return View(barrel);
+            return View(barrelDelete);
         }
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Barrel barrel = service.GetBarrelById(id);
-            service.Delete(barrel);
+            Barrel barrelDelete = service.GetBarrelById(id);
+            service.Delete(barrelDelete);
             return RedirectToAction("Index");
         }
 
@@ -71,12 +71,12 @@ namespace DatabaseActivities.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Barrel barrel = service.GetBarrelById((int)id);
-            if (barrel == null)
+            Barrel barrelDetails = service.GetBarrelById((int)id);
+            if (barrelDetails == null)
             {
                 return HttpNotFound();
             }
-            return View(barrel);
+            return View(barrelDetails);
         }
     }
 }

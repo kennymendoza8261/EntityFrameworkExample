@@ -79,5 +79,31 @@ namespace DatabaseActivities.Controllers
             }
             return View(barrelDetails);
         }
+
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Barrel barrelEdit = service.GetBarrelById((int)id);
+            if (barrelEdit == null)
+            {
+                return HttpNotFound();
+            }
+            return View(barrelEdit);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Barrel barrelEdit)
+        {
+            if (ModelState.IsValid)
+            {
+                service.Edit(barrelEdit);
+                return RedirectToAction("Index");
+            }
+            return View(barrelEdit);
+        }
     }
 }

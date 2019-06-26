@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using EntityFrameworkExample.Models;
 using EntityFrameworkExample.Services;
 
-namespace DatabaseActivities.Controllers
+namespace EntityFrameworkExample.Controllers
 {
     public class BarrelController : Controller
     {
@@ -78,6 +78,32 @@ namespace DatabaseActivities.Controllers
                 return HttpNotFound();
             }
             return View(barrelDetails);
+        }
+
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Barrel barrelEdit = service.GetBarrelById((int)id);
+            if (barrelEdit == null)
+            {
+                return HttpNotFound();
+            }
+            return View(barrelEdit);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Barrel barrelEdit)
+        {
+            if (ModelState.IsValid)
+            {
+                service.Edit(barrelEdit);
+                return RedirectToAction("Index");
+            }
+            return View(barrelEdit);
         }
     }
 }

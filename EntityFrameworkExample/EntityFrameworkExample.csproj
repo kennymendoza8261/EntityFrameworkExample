@@ -279,6 +279,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Barrel\Index.cshtml" />
     <Content Include="Views\Barrel\Details.cshtml" />
+    <Content Include="Views\Barrel\Create.cshtml" />
+    <Content Include="Views\Barrel\Edit.cshtml" />
+    <Content Include="Views\Barrel\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />

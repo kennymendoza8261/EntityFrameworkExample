@@ -29,14 +29,24 @@ namespace EntityFrameworkExample.Controllers
             //Create
             [HttpPost]
             [ValidateAntiForgeryToken]
-            public ActionResult Create(Cube cubeCreate)
+            public ActionResult Create(CubeCount cubeCreate)
             {
                 if (ModelState.IsValid)
                 {
-                    cubeCreate.DateCreated = DateTime.Now;
-                    service.AddCube(cubeCreate);
-                    return RedirectToAction("Index");
+                Cube temp = new Cube();
+                temp.SideLength = cubeCreate.SideLength;
+                temp.Weight = cubeCreate.Weight;
+                temp.ConstructionMaterial = cubeCreate.ConstructionMaterial;
+                temp.Contents = cubeCreate.Contents;
+                temp.CurrentLocation = cubeCreate.CurrentLocation;
+                temp.DateCreated = DateTime.Now;
+
+                for (int i = 0; i < cubeCreate.Amount; i++)
+                {
+                    service.AddCube(temp);
                 }
+                return RedirectToAction("Index");
+            }
 
                 return View(cubeCreate);
             }

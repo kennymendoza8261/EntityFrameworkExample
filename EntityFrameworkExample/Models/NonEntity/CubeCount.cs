@@ -8,8 +8,9 @@ namespace EntityFrameworkExample.Models
 {
     public class CubeCount
     {
-        public double Radius { get; set; }
-        public double Height { get; set; }
+        [Key]
+        public int Id { get; set; }
+        public double SideLength { get; set; }
         public double Weight { get; set; }
         public string ConstructionMaterial { get; set; }
         public string Contents { get; set; }

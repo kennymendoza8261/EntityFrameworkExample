@@ -40,7 +40,7 @@ namespace EntityFrameworkExample.Repository
 
         public void Edit(Barrel toEdit)
         {
-            dbCOntext.Entry(toEdit).State = EntityState.Modified;
+            dbCOntext.Entry(toEdit).State = System.Data.Entity.EntityState.Modified;
             dbCOntext.SaveChanges();
         }
     }

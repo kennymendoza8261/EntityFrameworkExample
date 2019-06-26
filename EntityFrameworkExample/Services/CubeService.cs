@@ -26,7 +26,7 @@ namespace EntityFrameworkExample.Services
             repository.Add(c);
         }
 
-        public Cube GetBarrelById(int Id)
+        public Cube GetCubeById(int Id)
         {
             return repository.GetCubeById(Id);
         }

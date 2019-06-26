@@ -1,0 +1,75 @@
+﻿@model EntityFrameworkExample.Models.Barrel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="container">
+    <h4>Barrel</h4>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12">
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contents)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contents)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Radius)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Radius)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConstructionMaterial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConstructionMaterial)
+        </dd>
+
+    </dl>
+</div>
+        </div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+</div>

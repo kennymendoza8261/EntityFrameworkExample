@@ -24,7 +24,7 @@ textarea {
 }
 table{
     color: #379FB3;
-    border: 3px solid black;
+    border: none;
     text-align: center;
     font-family: 'Trebuchet MS';
 }
@@ -32,7 +32,16 @@ th{
     text-align: center;
 }
 tr{
-    border:2px solid black;
+    border:none;
+}
+tr:hover{
+    background-color: #379FB3;
+    color: white;
+    transition: 0.4s;
+}
+tr:hover a{
+    color: white;
+    transition: 0.4s;
 }
 a{
     color: #379FB3;

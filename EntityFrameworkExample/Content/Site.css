@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 0px;
     padding-bottom: 20px;
 }
 
@@ -21,4 +21,107 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+table{
+    color: #379FB3;
+    border: none;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+}
+th{
+    text-align: center;
+}
+tr{
+    border:none;
+}
+tr:hover{
+    background-color: #379FB3;
+    color: white;
+    transition: 0.4s;
+}
+tr:hover a{
+    color: white;
+    transition: 0.4s;
+}
+a{
+    color: #379FB3;
+}
+h1 {
+    padding: 0px;
+    color: #FFAD69;
+    font-family: 'Trebuchet MS';
+}
+h2{
+    color: #FFAD69;
+    font-family: 'Trebuchet MS';
+}
+h4 {
+    font-family: 'Trebuchet MS';
+    color: #379FB3;
+}
+dl{
+    font-family: 'Trebuchet MS';
+    color: #379FB3;
+    font-size: 18px;
+}
+.edit-page {
+    font-family: 'Trebuchet MS';
+    color: #379FB3;
+}
+.navbar-button{
+    padding-top: 25px;
+    background-color: #379FB3;
+    color: white;
+    text-align: center;
+    font-family:'Trebuchet MS';
+    font-size: 24px;
+    height: 75px;
+}
+.navbar-button:hover{
+    color:#379FB3;
+    background-color: white;
+    transition:0.4s;
+}
+.navbar-row{
+    background-color: #379FB3;
+}
+.navbar-header{
+    text-align:center;
+}
+button{
+    color: white;
+    background-color:#379FB3;
+    border:none;
+    width:120px;
+    height:40px;
+    border-radius:5px;
+}
+button:hover{
+    background-color:white;
+    color:#379FB3;
+    border: 2px solid #379FB3;
+    transition:0.4s;
+}
+.create-button{
+    margin-top:15px;
+}
+.button-danger {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 180px;
+    height: 40px;
+    border-radius: 5px;
+}
+.button-danger:hover{
+    background-color: firebrick;
+    transition:0.4s;
+}
+.searchbar{
+    margin-top:20px;
+    height:40px;
+    width:180px;
+    border-radius:5px;
+    border: 1px solid black;
+    margin-bottom: 20px;
 }

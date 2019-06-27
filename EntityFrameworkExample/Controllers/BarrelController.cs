@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using EntityFrameworkExample.Data.Context;
 using EntityFrameworkExample.Models;
 using EntityFrameworkExample.Services;
 
@@ -116,5 +117,27 @@ namespace EntityFrameworkExample.Controllers
             }
             return View(barrelEdit);
         }
+
+        public ActionResult DeleteSelected(string[] ids)
+        {
+            if (ids == null || ids.Length == 0)
+            {
+                //throw error
+                ModelState.AddModelError("", "No item selected to delete");
+                return View();
+            }
+            //bind the task collection into list
+            List<int> TaskIds = ids.Select(x => Int32.Parse(x)).ToList();
+            for (var i = 0; i<TaskIds.Count(); i++)
+            {
+                var todo = service.GetBarrelById(TaskIds[i]);
+                //remove the record from the database
+                service.Delete(todo);
+            }
+            
+            //redirect to index view once record is deleted
+            return RedirectToAction("Index");
+        }
+
     }
 }

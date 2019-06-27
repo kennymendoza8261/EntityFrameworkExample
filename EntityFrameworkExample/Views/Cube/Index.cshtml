@@ -5,39 +5,48 @@
 }
 
 <div class="container">
-    <div class="row">
-        <div class="col-sm-8">
-            <h2>Cubes</h2>
+    @using (Html.BeginForm("DeleteSelected", "Cube", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>Cubes</h2>
+            </div>
+
+            <div class="col-sm-4">
+                <p>
+                    @Html.ActionLink("Create New", "Create")
+                    <input type="submit" value="Delete Selected Cubes" onclick="return confirm('Are you sure you wish to delete selected Cubes?');" class="btn btn-danger" />
+                </p>
+            </div>
         </div>
 
-        <div class="col-sm-4">
-            <p>
-                @Html.ActionLink("Create New", "Create")
-            </p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table">
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Id)
-                    </th>
-
-                    <th>
-                        @Html.DisplayNameFor(model => model.CurrentLocation)
-                    </th>
-
-                    <th>
-                        @Html.DisplayNameFor(model => model.Contents)
-                    </th>
-                    <th></th>
-                </tr>
-
-                @foreach (var item in Model)
-                 {
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table">
                     <tr>
+                        <th>
+
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Id)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.CurrentLocation)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Contents)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="ids" value="@item.Id" />
+                        </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Id)
                         </td>
@@ -57,11 +66,11 @@
                         </td>
                     </tr>
 
-                 }
-            </table>
+                    }
+                </table>
+            </div>
         </div>
+
+
+    }
     </div>
-
-
-
-</div>

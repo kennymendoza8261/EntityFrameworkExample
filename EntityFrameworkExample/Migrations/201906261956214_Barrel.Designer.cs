@@ -13,7 +13,7 @@ namespace EntityFrameworkExample.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201906261448424_Barrel"; }
+            get { return "201906261956214_Barrel"; }
         }
         
         string IMigrationMetadata.Source

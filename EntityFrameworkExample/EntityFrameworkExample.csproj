@@ -124,6 +124,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BarrelController.cs" />
+    <Compile Include="Controllers\CubeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\Configurations\BarrelConfiguration.cs" />
     <Compile Include="Data\Configurations\CubeConfiguration.cs" />
@@ -133,13 +134,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906261448424_Barrel.cs" />
-    <Compile Include="Migrations\201906261448424_Barrel.Designer.cs">
-      <DependentUpon>201906261448424_Barrel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906261857580_Cube.cs" />
-    <Compile Include="Migrations\201906261857580_Cube.Designer.cs">
-      <DependentUpon>201906261857580_Cube.cs</DependentUpon>
+    <Compile Include="Migrations\201906261956214_Barrel.cs" />
+    <Compile Include="Migrations\201906261956214_Barrel.Designer.cs">
+      <DependentUpon>201906261956214_Barrel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Barrel.cs" />
@@ -153,6 +150,7 @@
     <Compile Include="Repository\BarrelRepository.cs" />
     <Compile Include="Repository\CubeRepository.cs" />
     <Compile Include="Services\BarrelService.cs" />
+    <Compile Include="Services\CubeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\EntityFrameworkExample.Data.Context.DataContext.mdf" />
@@ -305,13 +303,9 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906261448424_Barrel.resx">
-      <DependentUpon>201906261448424_Barrel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906261956214_Barrel.resx">
+      <DependentUpon>201906261956214_Barrel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906261857580_Cube.resx">
-      <DependentUpon>201906261857580_Cube.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\EntityFrameworkExample.Migrations.Barrel.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

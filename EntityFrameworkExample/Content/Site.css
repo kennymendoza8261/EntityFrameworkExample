@@ -79,3 +79,20 @@ dl{
 .navbar-header{
     text-align:center;
 }
+button{
+    color: white;
+    background-color:#379FB3;
+    border:none;
+    width:120px;
+    height:40px;
+    border-radius:5px;
+}
+button:hover{
+    background-color:white;
+    color:#379FB3;
+    border: 2px solid #379FB3;
+    transition:0.4s;
+}
+.create-button{
+    margin-top:15px;
+}

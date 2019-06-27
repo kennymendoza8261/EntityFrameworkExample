@@ -28,7 +28,18 @@ $(document).ready(function(){
 </script>
 
 <div class="container">
-    <button id="create" class="create-button" onclick="location.href='@Url.Action("Create", "Barrel")'">Create</button>
+    <div class="row">
+        <div class="col-sm-8">
+            <button id="create" class="create-button" onclick="location.href='@Url.Action("Create", "Barrel")'">Create</button>
+        </div>
+        <div class="col-sm-4">
+            <div>
+                <input class="searchbar"id="myInput" type="text" placeholder="Search..">
+        
+            </div>
+        </div>
+    </div>
+    
     <form method="post" action="Barrel/DeleteSelected">
         <div class="row">
             <div class="col-sm-8">
@@ -40,11 +51,7 @@ $(document).ready(function(){
                 </p>
             </div>
         </div>
-        <div class="col-lg-4">
-            <input id="myInput" type="text" placeholder="Search..">
-        </div>
-    </div>
-</div>
+
 <div class="row">
     <div class="col-sm-12">
         <table class="table">
@@ -75,7 +82,7 @@ $(document).ready(function(){
                 </th>
                 <th></th>
             </tr>
-
+                    <tbody id="myTable">
                     @foreach (var item in Model)
                     {
                         <tr>
@@ -96,23 +103,23 @@ $(document).ready(function(){
                                 @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                             </td>
-                        </tr>
+                            <td id="Number">
+                                @Html.DisplayFor(modelItem => item.Height)
+                            </td>
+                            <td id="Number">
+                                @Html.DisplayFor(modelItem => item.Radius)
+                            </td>
+                            <td id="Number">
+                                @Html.DisplayFor(modelItem => item.Weight)
+                            </td>
+                            <td id="Item">
+                                @Html.DisplayFor(modelItem => item.ConstructionMaterial)
+                            </td>
+                            <td id="Number">
+                                @Html.DisplayFor(modelItem => item.DateCreated)
+                            </td>
 
-                    <td id="Number">
-                        @Html.DisplayFor(modelItem => item.Height)
-                    </td>
-                    <td id="Number">
-                        @Html.DisplayFor(modelItem => item.Radius)
-                    </td>
-                    <td id="Number">
-                        @Html.DisplayFor(modelItem => item.Weight)
-                    </td>
-                    <td id="Item">
-                        @Html.DisplayFor(modelItem => item.ConstructionMaterial)
-                    </td>
-                    <td id="Number">
-                        @Html.DisplayFor(modelItem => item.DateCreated)
-                    </td>
+                    
                    
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
@@ -125,6 +132,8 @@ $(document).ready(function(){
             }</tbody>
         </table>
     </div>
+</div>
+    </form>
 </div>
       
 

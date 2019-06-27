@@ -117,3 +117,11 @@ button:hover{
     background-color: firebrick;
     transition:0.4s;
 }
+.searchbar{
+    margin-top:20px;
+    height:40px;
+    width:180px;
+    border-radius:5px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}

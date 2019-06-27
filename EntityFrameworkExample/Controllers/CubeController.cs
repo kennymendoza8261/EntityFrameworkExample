@@ -122,7 +122,7 @@ namespace EntityFrameworkExample.Controllers
             {
                 //throw error
                 ModelState.AddModelError("", "No item selected to delete");
-                return View();
+                return RedirectToAction("Index");
             }
             //bind the task collection into list
             List<int> TaskIds = ids.Select(x => Int32.Parse(x)).ToList();

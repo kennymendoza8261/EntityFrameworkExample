@@ -17,8 +17,15 @@
 </script>
 
 <div class="container">
-    <button id="create" class="create-button" onclick="location.href='@Url.Action("Create", "Cube")'">Create</button>
-    <form method="post" action="Cube/DeleteSelected">
+    <div class="row">
+        <div class="col-sm-8">
+            <button id="create" class="create-button" onclick="location.href='@Url.Action("Create", "Cube")'">Create</button>
+        </div>
+        <div class="col-sm-4">
+            <input class="searchbar" id="myInput" type="text" placeholder="Search..">
+        </div>
+    </div>
+        <form method="post" action="Cube/DeleteSelected">
         <div class="row">
             <div class="col-sm-8">
                 <h2>Cubes</h2>
@@ -27,9 +34,6 @@
                 <p>
                     <input type="submit" value="Delete Selected Cubes" onclick="return confirm('Are you sure you wish to delete selected Cubes?');" class="button-danger" />
                 </p>
-            </div>
-            <div class="col-sm-4">
-                <input id="myInput" type="text" placeholder="Search..">
             </div>
         </div>
         <div class="row">
@@ -108,8 +112,4 @@
             </div>
         </div>
     </form>
-</div>
-
-
-    }
 </div>

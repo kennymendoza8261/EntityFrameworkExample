@@ -136,15 +136,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906261448424_Barrel.cs" />
-    <Compile Include="Migrations\201906261448424_Barrel.Designer.cs">
-      <DependentUpon>201906261448424_Barrel.cs</DependentUpon>
+    <Compile Include="Migrations\201906261956214_Barrel.cs" />
+    <Compile Include="Migrations\201906261956214_Barrel.Designer.cs">
+      <DependentUpon>201906261956214_Barrel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Barrel.cs" />
     <Compile Include="Models\Cube.cs" />
     <Compile Include="Models\ExampleChildEntity.cs" />
     <Compile Include="Models\ExampleEntity.cs" />
+    <Compile Include="Models\NonEntity\BarrelCount.cs" />
+    <Compile Include="Models\NonEntity\CubeCount.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -280,6 +282,11 @@
     <Content Include="Views\Barrel\Delete.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\About.cshtml" />
+    <Content Include="Views\Cube\Delete.cshtml" />
+    <Content Include="Views\Cube\Create.cshtml" />
+    <Content Include="Views\Cube\Details.cshtml" />
+    <Content Include="Views\Cube\Edit.cshtml" />
+    <Content Include="Views\Cube\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -300,8 +307,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906261448424_Barrel.resx">
-      <DependentUpon>201906261448424_Barrel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906261956214_Barrel.resx">
+      <DependentUpon>201906261956214_Barrel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\EntityFrameworkExample.Migrations.Barrel.resources" />
   </ItemGroup>

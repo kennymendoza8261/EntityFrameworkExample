@@ -21,7 +21,6 @@ namespace EntityFrameworkExample.Repository
             return dbContext.Cubes.ToList();
         }
 
-
         public Cube GetCubeById(int Id)
         {
             return dbContext.Cubes.Find(Id);

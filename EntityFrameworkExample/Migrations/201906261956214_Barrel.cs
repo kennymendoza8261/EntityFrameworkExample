@@ -23,6 +23,20 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Cubes",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        SideLength = c.Double(nullable: false),
+                        Weight = c.Double(nullable: false),
+                        ConstructionMaterial = c.String(),
+                        Contents = c.String(),
+                        CurrentLocation = c.String(),
+                        DateCreated = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.ExampleEntities",
                 c => new
                     {
@@ -52,6 +66,7 @@
             DropIndex("dbo.ExampleChildEntities", new[] { "ParentEntityId" });
             DropTable("dbo.ExampleChildEntities");
             DropTable("dbo.ExampleEntities");
+            DropTable("dbo.Cubes");
             DropTable("dbo.Barrels");
         }
     }

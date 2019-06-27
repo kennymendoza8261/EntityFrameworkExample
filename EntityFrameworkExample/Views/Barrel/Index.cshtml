@@ -4,6 +4,29 @@
     ViewBag.Title = "Index";
 }
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
 <div class="container">
     <button id="create" class="create-button" onclick="location.href='@Url.Action("Create", "Barrel")'">Create</button>
     <form method="post" action="Barrel/DeleteSelected">
@@ -17,53 +40,93 @@
                 </p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <table class="table">
-                    <tr>
-                        <th>
-
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Id)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.CurrentLocation)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Contents)
-                        </th>
-                        <th></th>
-                    </tr>
+        <div class="col-lg-4">
+            <input id="myInput" type="text" placeholder="Search..">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentLocation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contents)
+                </th>
+                <th id="Number">
+                    @Html.DisplayNameFor(model => model.Height)
+                </th>
+                <th id="Number">
+                    @Html.DisplayNameFor(model => model.Radius)
+                </th>
+                <th id="Number">
+                    @Html.DisplayNameFor(model => model.Weight)
+                </th>
+                <th id="">
+                    @Html.DisplayNameFor(model => model.ConstructionMaterial)
+                </th>
+                <th hidden>
+                    @Html.DisplayNameFor(model => model.DateCreated)
+                </th>
+                <th></th>
+            </tr>
 
                     @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            <input type="checkbox" name="ids" value="@item.Id" />
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Id)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CurrentLocation)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Contents)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                        </td>
-                    </tr>
+                    {
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="ids" value="@item.Id" />
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Id)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CurrentLocation)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Contents)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                            </td>
+                        </tr>
 
-            }
-                </table>
-            </div>
-        </div>
-    </form>
+                    <td id="Number">
+                        @Html.DisplayFor(modelItem => item.Height)
+                    </td>
+                    <td id="Number">
+                        @Html.DisplayFor(modelItem => item.Radius)
+                    </td>
+                    <td id="Number">
+                        @Html.DisplayFor(modelItem => item.Weight)
+                    </td>
+                    <td id="Item">
+                        @Html.DisplayFor(modelItem => item.ConstructionMaterial)
+                    </td>
+                    <td id="Number">
+                        @Html.DisplayFor(modelItem => item.DateCreated)
+                    </td>
+                   
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+
+                </tr>
+
+            }</tbody>
+        </table>
+    </div>
 </div>
+      
 
 
 

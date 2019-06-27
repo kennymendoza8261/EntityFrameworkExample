@@ -1,4 +1,5 @@
-﻿@model EntityFrameworkExample.Models.BarrelCount
+﻿@model EntityFrameworkExample.Models.CubeCount
+
 @{
     ViewBag.Title = "Create";
 }
@@ -10,26 +11,18 @@
     {
         @Html.AntiForgeryToken()
     <div class="form-horizontal">
-        <h4>Barrel</h4>
+        <h4>Cube</h4>
         <hr />
-        <div class="edit-page">
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <div class="form-group">
-            @Html.LabelFor(Model => Model.Radius, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(Model => Model.SideLength, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Radius, new { HtmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Radius, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.SideLength, new { HtmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SideLength, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(Model => Model.Height, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Height, new { HtmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Height, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
         <div class="form-group">
             @Html.LabelFor(Model => Model.Weight, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -46,7 +39,7 @@
                 @Html.ValidationMessageFor(model => model.ConstructionMaterial, "", new { @class = "text-danger" })
             </div>
         </div>
-           
+
         <div class="form-group">
             @Html.LabelFor(Model => Model.Contents, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -62,7 +55,7 @@
                 @Html.ValidationMessageFor(model => model.CurrentLocation, "", new { @class = "text-danger" })
             </div>
         </div>
-            </div>
+
         <div class="form-group">
             @Html.LabelFor(Model => Model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">

@@ -153,10 +153,6 @@
     <Compile Include="Services\CubeService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EntityFrameworkExample.Data.Context.DataContext.mdf" />
-    <Content Include="App_Data\EntityFrameworkExample.Data.Context.DataContext_log.ldf">
-      <DependentUpon>EntityFrameworkExample.Data.Context.DataContext.mdf</DependentUpon>
-    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
@@ -287,6 +283,7 @@
     <Content Include="Views\Cube\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
@@ -306,6 +303,7 @@
     <EmbeddedResource Include="Migrations\201906261956214_Barrel.resx">
       <DependentUpon>201906261956214_Barrel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\EntityFrameworkExample.Migrations.Barrel.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

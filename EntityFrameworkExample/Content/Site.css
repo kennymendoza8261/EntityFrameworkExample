@@ -105,3 +105,15 @@ button:hover{
 .create-button{
     margin-top:15px;
 }
+.button-danger {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 180px;
+    height: 40px;
+    border-radius: 5px;
+}
+.button-danger:hover{
+    background-color: firebrick;
+    transition:0.4s;
+}

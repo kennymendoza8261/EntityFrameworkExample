@@ -11,7 +11,7 @@ namespace EntityFrameworkExample.Controllers
         // GET: Login
         public ActionResult Index()
         {
-            return View();
+            return PartialView();
         }
 
         public ActionResult About()

@@ -116,5 +116,6 @@ namespace EntityFrameworkExample.Controllers
                 return View(cubeEdit);
             }
         }
-}
+    }
+
 

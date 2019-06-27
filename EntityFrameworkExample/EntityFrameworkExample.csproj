@@ -134,9 +134,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906261448424_Barrel.cs" />
-    <Compile Include="Migrations\201906261448424_Barrel.Designer.cs">
-      <DependentUpon>201906261448424_Barrel.cs</DependentUpon>
+    <Compile Include="Migrations\201906261956214_Barrel.cs" />
+    <Compile Include="Migrations\201906261956214_Barrel.Designer.cs">
+      <DependentUpon>201906261956214_Barrel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Barrel.cs" />
@@ -278,6 +278,11 @@
     <Content Include="Views\Barrel\Create.cshtml" />
     <Content Include="Views\Barrel\Edit.cshtml" />
     <Content Include="Views\Barrel\Delete.cshtml" />
+    <Content Include="Views\Cube\Delete.cshtml" />
+    <Content Include="Views\Cube\Create.cshtml" />
+    <Content Include="Views\Cube\Details.cshtml" />
+    <Content Include="Views\Cube\Edit.cshtml" />
+    <Content Include="Views\Cube\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -297,8 +302,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906261448424_Barrel.resx">
-      <DependentUpon>201906261448424_Barrel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906261956214_Barrel.resx">
+      <DependentUpon>201906261956214_Barrel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\EntityFrameworkExample.Migrations.Barrel.resources" />
   </ItemGroup>
